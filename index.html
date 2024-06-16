@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+ <!-- Replace 'logo.png' with your actual logo file -->
+     <link rel="icon" type="image/png" href="path.png">
+</head>
+<body>
+    <div class="container">
+<!-- Form action to submit to Web3Forms API -->
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <div class="form-content">
+                <legend>Contact Us</legend>
+  <!-- Hidden inputs for API access key, redirect URL, and email subject -->
+                <input type="hidden" name="access_key" value="685054ff-cd88-4230-adb9-85382222bb4f">
+                <input type="hidden" name="redirect" value="contact-thankyou-page.html">
+                <input type="hidden" name="subject" value="Hey Sachin, New feedback for your website">
+
+                <div class="input-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" name="instagram_id" placeholder="Instagram ID" required pattern="^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$" title="Please enter a valid Instagram ID.">
+                    <small>Enter your Instagram ID (optional)</small>
+                </div>
+
+                <div class="input-group">
+                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                </div>
+
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
